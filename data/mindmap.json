@@ -1,0 +1,283 @@
+{
+  "mindmaps": [
+    {
+      "id": "3295209c-c47f-4b8c-8f60-55ce68d2818b",
+      "name": "Mindmap hihi123",
+      "userId": "google-oauth2|112982697115676978850",
+      "createdAt": "2024-10-31T23:33:26+07:00",
+      "description": "11111",
+      "map": {
+        "nodes": [
+          {
+            "id": "0",
+            "position": {
+              "x": 100,
+              "y": 50
+            },
+            "data": {
+              "label": "My Mindmap"
+            },
+            "origin": [
+              0.5,
+              0
+            ],
+            "type": "textUpdater",
+            "measured": {
+              "width": 150,
+              "height": 40
+            }
+          },
+          {
+            "id": "1",
+            "position": {
+              "x": 225,
+              "y": 135
+            },
+            "data": {
+              "label": "Text 1"
+            },
+            "origin": [
+              0.5,
+              0
+            ],
+            "type": "textUpdater",
+            "measured": {
+              "width": 150,
+              "height": 40
+            }
+          },
+          {
+            "id": "2",
+            "position": {
+              "x": -239.18478260869563,
+              "y": 165
+            },
+            "data": {
+              "label": "Text 1111"
+            },
+            "origin": [
+              0.5,
+              0
+            ],
+            "type": "textUpdater",
+            "measured": {
+              "width": 150,
+              "height": 40
+            },
+            "selected": false,
+            "dragging": false
+          },
+          {
+            "id": "3",
+            "position": {
+              "x": -525,
+              "y": -45
+            },
+            "data": {
+              "label": "Text 3"
+            },
+            "origin": [
+              0.5,
+              0
+            ],
+            "type": "textUpdater",
+            "measured": {
+              "width": 150,
+              "height": 40
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "1",
+            "source": "0",
+            "target": "1"
+          },
+          {
+            "id": "2",
+            "source": "0",
+            "target": "2"
+          },
+          {
+            "id": "3",
+            "source": "2",
+            "target": "3"
+          }
+        ]
+      },
+      "mode": "public",
+      "seo": {
+        "title": "Mindmap hihi123",
+        "description": "11111",
+        "image": "http://localhost:3000/img/so-do-tu-duy.jpg"
+      }
+    },
+    {
+      "id": "dadbef82-6fb2-4ffb-acfa-ed360c7c252e",
+      "name": "Mindmap 1123",
+      "userId": "google-oauth2|112982697115676978850",
+      "createdAt": "2024-11-02T14:48:46+07:00",
+      "description": "Chưa có mô tả",
+      "map": {
+        "nodes": [
+          {
+            "id": "0",
+            "position": {
+              "x": 100,
+              "y": 50
+            },
+            "data": {
+              "label": "My Mindmap"
+            },
+            "origin": [
+              0.5,
+              0
+            ],
+            "type": "textUpdater",
+            "measured": {
+              "width": 150,
+              "height": 40
+            }
+          }
+        ],
+        "edges": []
+      }
+    },
+    {
+      "id": "6c0e04cb-f3a8-46be-9021-8ab47de96145",
+      "name": "Mindmap Seo",
+      "userId": "google-oauth2|112982697115676978850",
+      "createdAt": "2024-11-02T17:04:48+07:00",
+      "description": "Chưa có mô tả seo",
+      "map": {
+        "nodes": [
+          {
+            "id": "0",
+            "position": {
+              "x": 100,
+              "y": 50
+            },
+            "data": {
+              "label": "My Mindmap"
+            },
+            "origin": [
+              0.5,
+              0
+            ],
+            "type": "textUpdater",
+            "measured": {
+              "width": 150,
+              "height": 40
+            }
+          }
+        ],
+        "edges": []
+      },
+      "mode": "public",
+      "seo": {
+        "title": "Mindmap Seo",
+        "description": "Chưa có mô tả seo",
+        "image": "http://localhost:3000/img/so-do-tu-duy.jpg"
+      }
+    },
+    {
+      "id": "4a409ff2-3d60-48fc-884b-bd5c5b096e63",
+      "name": "Mindmap T1",
+      "userId": "google-oauth2|112982697115676978850",
+      "createdAt": "2024-11-02T17:29:27+07:00",
+      "description": "Chưa có mô tả T1",
+      "map": {
+        "nodes": [
+          {
+            "id": "0",
+            "position": {
+              "x": -109.8017578128902,
+              "y": -74.03374361265207
+            },
+            "data": {
+              "label": "My Mindmap"
+            },
+            "origin": [
+              0.5,
+              0
+            ],
+            "type": "textUpdater",
+            "measured": {
+              "width": 150,
+              "height": 40
+            },
+            "selected": false,
+            "dragging": false
+          },
+          {
+            "id": "1",
+            "position": {
+              "x": 150,
+              "y": 45
+            },
+            "data": {
+              "label": "Text 1"
+            },
+            "origin": [
+              0.5,
+              0
+            ],
+            "type": "textUpdater",
+            "measured": {
+              "width": 150,
+              "height": 40
+            }
+          },
+          {
+            "id": "2",
+            "position": {
+              "x": -315,
+              "y": 45
+            },
+            "data": {
+              "label": "Text 2"
+            },
+            "origin": [
+              0.5,
+              0
+            ],
+            "type": "textUpdater",
+            "measured": {
+              "width": 150,
+              "height": 40
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "1",
+            "source": "0",
+            "target": "1"
+          },
+          {
+            "id": "2",
+            "source": "0",
+            "target": "2"
+          }
+        ]
+      },
+      "mode": "public",
+      "seo": {
+        "title": "Mindmap T1",
+        "description": "asaaaaa",
+        "image": "http://localhost:3000/img/so-do-tu-duy.jpg"
+      }
+    },
+    {
+      "id": "ab222d92-30a1-41fe-8471-f7a760a9c2a1",
+      "name": "Mindmap không có tên",
+      "userId": "google-oauth2|112982697115676978850",
+      "createdAt": "2024-11-03T15:26:18+07:00",
+      "mode": "public",
+      "seo": {
+        "title": "Mindmap không có tên",
+        "image": "http://localhost:3000/img/so-do-tu-duy.jpg"
+      }
+    }
+  ]
+}
