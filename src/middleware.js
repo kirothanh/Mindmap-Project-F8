@@ -1,6 +1,6 @@
 import {
   getSession,
-} from "@auth0/nextjs-auth0";
+} from "@auth0/nextjs-auth0/edge";
 import { NextResponse } from "next/server";
 
 export const middleware = async (req) => {
