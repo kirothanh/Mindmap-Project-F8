@@ -1,6 +1,6 @@
 import {
   getSession,
-} from "@auth0/nextjs-auth0/edge";
+} from "@auth0/nextjs-auth0";
 import { NextResponse } from "next/server";
 
 export const middleware = async (req) => {
@@ -17,9 +17,12 @@ export const middleware = async (req) => {
   }
 
   if (mode === "private") {
-    const { user } = await getSession();
-    if (!user) {
-      return NextResponse.redirect(new URL("/api/auth/login", req.url));
+    const session = await getSession();
+    if (session) {
+      const { user } = session;
+      if (!user) {
+        return NextResponse.redirect(new URL("/api/auth/login", req.url));
+      }
     }
   }
 };
