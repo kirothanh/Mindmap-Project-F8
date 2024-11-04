@@ -17,7 +17,7 @@ export const middleware = async (req) => {
   }
 
   if (mode === "private") {
-    const user = await getSession();
+    const { user } = await getSession();
     if (!user) {
       return NextResponse.redirect(new URL("/api/auth/login", req.url));
     }

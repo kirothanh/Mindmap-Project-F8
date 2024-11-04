@@ -35,7 +35,7 @@ export default async function MindmapDetail({ params }) {
   let user = {};
   const session = await getSession();
   if (session) {
-    user = session.user;
+    user = session?.user;
   }
 
   // Lấy mindmap bỏ qua xác thực
