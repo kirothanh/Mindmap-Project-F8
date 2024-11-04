@@ -10,56 +10,64 @@ export const generateMetadata = async ({ params }) => {
 
   if (mindmap) {
     return {
-      title: mindmap?.seo?.title ? mindmap?.seo?.title : mindmap.name,
-      description: mindmap?.seo?.description
-        ? mindmap?.seo?.description
-        : mindmap.description,
+      title: mindmap?.seo?.title ?? mindmap.name,
+      description: mindmap?.seo?.description ?? mindmap.description,
       openMindmap: {
-        title: mindmap?.seo?.title ? mindmap?.seo?.title : mindmap.name,
-        description: mindmap?.seo?.description
-          ? mindmap?.seo?.description
-          : mindmap.description,
+        title: mindmap?.seo?.title ?? mindmap.name,
+        description: mindmap?.seo?.description ?? mindmap.description,
         images: [
-          mindmap?.seo?.image
-            ? mindmap?.seo?.image
-            : process.env.HOST_URL + "/img/so-do-tu-duy.jpg",
+          mindmap?.seo?.image ??
+          process.env.HOST_URL + "/img/so-do-tu-duy.jpg",
         ],
       },
     };
   }
+  return {};
 };
 
 export default async function MindmapDetail({ params }) {
   const { id } = params;
 
-  let user = {};
-  const session = await getSession();
-  if (session) {
-    user = session?.user;
-  }
+  const user = {
+    sub: null
+  };
 
-  // Lấy mindmap bỏ qua xác thực
-  const response = await fetch(
-    `${process.env.HOST_URL}/api/mindmap?id=${id}&auth=false`
-  );
-  const { data: mindmap } = await response.json();
-
-  if (!mindmap) {
-    notFound();
-  }
-
-  if (mindmap.mode === "private" || !mindmap.mode) {
-    if (mindmap.userId !== user.sub) {
-      notFound();
+  try {
+    const session = await getSession();
+    if (session?.user) {
+      Object.assign(user, session.user);
     }
+  } catch (error) {
+    console.error("Error getting session:", error);
   }
 
-  return (
-    <>
+  try {
+    const response = await fetch(
+      `${process.env.HOST_URL}/api/mindmap?id=${id}&auth=false`
+    );
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const { data: mindmap } = await response.json();
+
+    if (!mindmap) {
+      return notFound();
+    }
+
+    if ((mindmap.mode === "private" || !mindmap.mode) && mindmap.userId !== user.sub) {
+      return notFound();
+    }
+
+    return (
       <MindmapContainer
         mindmap={mindmap}
         editable={mindmap.userId === user.sub}
       />
-    </>
-  );
+    );
+  } catch (error) {
+    console.error("Error fetching mindmap:", error);
+    return notFound();
+  }
 }
