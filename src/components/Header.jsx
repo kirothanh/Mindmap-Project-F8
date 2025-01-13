@@ -10,11 +10,11 @@ export default function Header() {
   const pathname = usePathname();
   const { user, error, isLoading } = useUser();
 
-  if (isLoading) return <Loading />;
+  if (isLoading) return <Loading className="overflow-hidden" />;
   if (error) return <div>{error.message}</div>;
 
   return (
-    <div className="flex items-center justify-between py-4 px-2">
+    <div className="flex items-center justify-between py-4 px-2 overflow-hidden">
       <div>
         <Link href="/" className="capitalize text-2xl font-bold text-blue-600">
           mindmap flow
